@@ -1,19 +1,8 @@
 ## 东北大学本科毕业论文 latex模板 2020
---------------
+
+
 修改自[neu_bachelor_thesis_template](https://github.com/Acytoo/neu_bachelor_thesis_template)。
 
-<<<<<<< HEAD
-=======
-设计时参考了[清华大学学位论文LaTeX模板](https://github.com/xueruini/thuthesis)
-
-使用了[GBT7714-2005参考文献标准](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)
-
-对上面的三个项目表示感谢。
-
-如果你觉得本模板帮助了你，可以给上面三个项目送一颗小星星
-
----------------
->>>>>>> 5e0923d9d7fa536c2b0cf473996b40ad30fe2d9b
 ### 使用方法
 * `make`    生成论文 main.pdf；
 * `make view`    生成论文 main.pdf 并查看生成的论文；
@@ -31,11 +20,8 @@
 
 * 请使用xelatex
 
-<<<<<<< HEAD
-* 可能需要手动安装参考文献的标准，具体的安装方式请见[GBT7714-2005参考文献标准](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)。使用GBT7714-2005参考文献标准，请删除cls文件中348行```\bibliographystyle{gbt7714-2005} ```前的注释。
-=======
+
 * 可能需要手动安装参考文献的标准，具体的安装方式请见[GBT7714-2005参考文献标准](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)。使用GBT7714-2005参考文献标准，请删除cls文件中338行的注释。
->>>>>>> 5e0923d9d7fa536c2b0cf473996b40ad30fe2d9b
 
 * 如果你的目录页共有奇数页，一定要在目录后面加入一个空白页，或者将目录与正文分开打印，否则正文的第一页可能被打印在目录页的背面。
 
