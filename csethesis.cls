@@ -1,5 +1,6 @@
 \ProvidesClass{csethesis}
 \LoadClass[twoside,openright,UTF8,cs4size,a4paper]{ctexbook}%要求从目录页双面，默认twoside
+
 \RequirePackage{pdfpages}%插入pdf文档
 
 % http://aao.neu.edu.cn/2018/1112/c2570a42991/pagem.htm 毕业设计要求
@@ -9,11 +10,40 @@
 \songti
 % 字体大小：\zihao{x} x: 4表示四号 -4表示小四，以此类推
 
+\setCJKfamilyfont{zhsong}[AutoFakeBold = {2.17}]{SimSun}
+\newenvironment{jc}{\fontfamily{zhsong}\selectfont}
+
 % --------行距---------%
 \RequirePackage{setspace}
 \renewcommand{\baselinestretch}{1.5} %\normalsize %1.5倍行距
 
 % --------章节设置-------%
+
+%\ctexset { 
+%  chapter = {  
+%    name={}, 
+%    number={\arabic { chapter } }, 
+%    format={\centering \heiti \zihao {-2}},
+%    aftername={\quad }, beforeskip={-5ex}, afterskip={1.0ex}
+% },
+%  section = {
+%    format = {\Large},
+%    nameformat+={\zihao{4}},
+%    aftername={\ },
+%    titleformat={\zihao{4}\heiti},
+%    beforeskip={1.0ex},
+%    afterskip={1.0ex}
+%  },
+%  subsection = {
+%    format={\Large\bfseries},
+%    nameformat+={\zihao{-4}},
+%    aftername={\ },
+%    titleformat={\zihao{-4}\heiti},
+%    beforeskip={1.0ex},
+%    afterskip={1.0ex}
+%  }
+%}
+
 \CTEXsetup[
 name={},                   % 默认{第,章}
 number={\arabic{chapter}},  %章节编号设置为阿拉伯数字格式
@@ -197,7 +227,8 @@ afterskip={1.0ex}
 }%结束部分定义
 
 % ------------目录------------%
-\CTEXoptions[contentsname={目 \qquad 录}]
+\ctexset { contentsname={目 \qquad 录} } 
+%\CTEXoptions[contentsname={目 \qquad 录}]
 \RequirePackage[titles,subfigure]{tocloft}
 \renewcommand{\cftdot}{$\cdot$}
 \renewcommand{\cftdotsep}{1}%点间距
@@ -258,6 +289,7 @@ afterskip={1.0ex}
 % -----------表格---------------%
 \RequirePackage{longtable} %长表格
 \RequirePackage{booktabs}%三线表
+\renewcommand\arraystretch{1.3}
 
 % -----------插图---------------%
 \RequirePackage{graphicx}
@@ -300,6 +332,10 @@ afterskip={1.0ex}
 \RequirePackage{textcomp} %摄氏度符号
 % \RequirePackage{ccmap} %pdf中文复制
 \RequirePackage{color} %gnuplot彩色文字
+\captiondelim{ }
+
+%-------------引用角标------------%
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
 
 
 % ------------代码------------%
@@ -351,13 +387,15 @@ afterskip={1.0ex}
 %super,
 %square]{natbib} %参数代表：数字,排序与压缩,上标，方括号
 \bibliographystyle{gbt7714-2005} %参考文献格式设为GBT7714-2005N
+\usepackage[numbers,sort&compress]{natbib}
+\setlength{\bibsep}{0.5ex}  %缩小参考文献间距
 
 \RequirePackage[
 draft=false,
 colorlinks=true,
 CJKbookmarks=true,
 linkcolor=black,
-citecolor=red,
+citecolor=black,
 urlcolor=black,
 hyperindex]{hyperref}%引用链接颜色设置
 
