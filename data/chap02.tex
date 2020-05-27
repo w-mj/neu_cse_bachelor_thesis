@@ -81,15 +81,8 @@
 
 
 
-\begin{table}[htbp]
-  \centering
-  \caption{\songti\zihao{5}自适应阈值-减小步长寻找更优阈值}
-  \label{table:adaptive_parameters_more}
-  \setlength{\tabcolsep}{5mm}{
-  \begin{tabular}{ccccc}
-    \toprule
-    倍数 & 平均精确率 & 平均召回率 & F-score & 计算耗时 \\
-    \midrule
+\mytable{自适应阈值-减小步长寻找更优阈值}{table:adaptive_parameters_more}{ccccc}
+{倍数 & 平均精确率 & 平均召回率 & F-score & 计算耗时}{
     1.25  &  81.4937\%  &  67.8341\%   & 74.0392\% & 23s \\
     1.30  &  80.2888\%  &  68.7326\%  &  74.0627\% & 22s \\
     1.35  &  79.2812\%  &  69.7478\%   & 74.2096\% & 23s \\
@@ -99,6 +92,4 @@
     1.55  &  74.5063\%  &  73.0072\%   & 73.7492\% & 21s \\
     1.60  &  73.2367\%  &  73.8578\%   & 73.5459\% & 21s \\
     1.65  &  72.0713\%  &  74.5796\%   & 73.3040\% & 21s \\
-    \bottomrule
-  \end{tabular}}
-\end{table}
+}

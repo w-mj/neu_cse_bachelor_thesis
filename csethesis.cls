@@ -289,7 +289,24 @@ afterskip={1.0ex}
 % -----------表格---------------%
 \RequirePackage{longtable} %长表格
 \RequirePackage{booktabs}%三线表
-\renewcommand\arraystretch{1.3}
+\renewcommand\arraystretch{1.5}
+\newcommand{\mytable}[5]{
+\begin{table}[htbp]
+  \captionnamefont{\heiti\zihao{-4}}
+  \centering
+  \zihao{5}
+  \caption{\heiti\zihao{-4}#1}
+  \label{#2}
+  \setlength{\tabcolsep}{5mm}{
+  \begin{tabular}{#3}
+    \toprule
+    #4 \\
+    \midrule
+    #5
+    \bottomrule
+  \end{tabular}}
+\end{table}
+}
 
 % -----------插图---------------%
 \RequirePackage{graphicx}
